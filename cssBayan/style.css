@@ -77,8 +77,8 @@ label {
 .icon {
     opacity: 0;
     padding-bottom: 0;
-    float: right;
     width: 2em;
+    float: right;
     transform: rotate(0deg);
     -webkit-transition: opacity 0.8s, transform 0.5s, -webkit-transform 0.5s;
     transition: opacity 0.8s, transform 0.5s; 
