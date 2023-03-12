@@ -7,6 +7,7 @@
 
 h1{
     padding: 1rem;
+    font-size: 3em;
 }
 
 img {
@@ -118,13 +119,26 @@ label {
 
 
 @media all and (max-width:1000px) {
+    
+    h1{
+        font-size: 1.8em;
+    }
+    
     .accordion {
-        width: 70%;
+        width: 65%;
+    }
+
+    label {
+        font-size: 1rem;
     }
 }
 
 
 @media all and (max-width:568px) {
+
+    h1{
+        font-size: 1.6em;
+    }
     .accordion {
         width: 90%;
     }
