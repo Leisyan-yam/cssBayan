@@ -25,7 +25,7 @@ body {
 }
 
 .accordion {
-    width: 30%;
+    width: 40vw;
     margin-top: 2vh;
     padding: 0.5rem;
 }
@@ -64,6 +64,7 @@ label {
     cursor: pointer;
     display:inline-block;
     padding: 0.5rem;
+    font-size: 1.2rem;
     overflow: hidden; 
     border-top: 0.2rem solid burlywood;
     width: 100%;
@@ -115,3 +116,23 @@ label {
     transform: rotate(180deg);
 }
 
+
+@media all and (max-width:1000px) {
+    .accordion {
+        width: 70%;
+    }
+}
+
+
+@media all and (max-width:568px) {
+    .accordion {
+        width: 90%;
+    }
+    img {
+        width: 70%;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+}
