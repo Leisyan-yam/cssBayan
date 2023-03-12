@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Jost', sans-serif;
+    box-sizing: border-box;
+}
+
+h1{
+    padding: 1rem;
+}
+
+img {
+    width: 50%;
+    padding-bottom: 5%;
+}
+
+body {
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow:visible;
+    height: 100%;
+}
+
+.accordion {
+    width: 30%;
+    margin-top: 2vh;
+    padding: 0.5rem;
+}
+
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    color: black;
+}
+
+.item {
+    width: 100%;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;  
+    max-height: 0;
+    opacity: 0;
+    -webkit-transition: width 1.5s, height 1.5s, opacity 1.5s, -webkit-transform 1.5s;
+    transition: width 1.5s, height 1.5s, opacity 1.5s, transform 1.5s;
+}
+
+.item > input:checked ~ .content {
+    max-height: fit-content;
+    opacity: 1;
+}
+
+
+
+label {
+    cursor: pointer;
+    display:inline-block;
+    padding: 0.5rem;
+    overflow: hidden; 
+    border-top: 0.2rem solid burlywood;
+    width: 100%;
+    color: #a54296;
+    font-weight: bolder;
+    -webkit-transition: color 0.8s,  -webkit-transform 0.5s;
+    transition: color 0.8s;
+}
+
+
+.icon {
+    opacity: 0;
+    padding-bottom: 0;
+    float: right;
+    width: 2em;
+    transform: rotate(0deg);
+    -webkit-transition: opacity 0.8s, transform 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.8s, transform 0.5s; 
+}
+
+.item > input:checked ~ label .icon {
+    opacity: 1;
+    transform: rotate(180deg);
+}
+
+
+.accordion:hover .icon {
+    opacity: 1;
+}
+
+.accordion:hover label {
+    color: black;
+}
+
+
+
+.item:hover .content {
+    transition-delay: 0.3s;
+    max-height: fit-content;
+    opacity: 1;
+}
+
+.accordion:hover{
+    cursor: pointer;
+}
+
+
+.item:hover .icon {
+    transform: rotate(180deg);
+}
+
