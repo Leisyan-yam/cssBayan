@@ -119,6 +119,15 @@ label {
 
 
 @media all and (max-width:1000px) {
+
+    .accordion:focus label {
+        color: black;
+    }
+
+
+    .accordion:focus .icon {
+        opacity: 1;
+    }
     
     h1{
         font-size: 1.8em;
