@@ -34,11 +34,16 @@ body {
 
 input {
     display: none;
+    cursor: pointer;
 }
 
-input:checked + label {
+input:checked + label .content {
     color: black;
+    max-height: fit-content;
+    opacity: 1;
 }
+
+
 
 .item {
     width: 100%;
@@ -58,7 +63,6 @@ input:checked + label {
     max-height: fit-content;
     opacity: 1;
 }
-
 
 
 label {
@@ -92,6 +96,7 @@ label {
 }
 
 
+
 .accordion:hover .icon {
     opacity: 1;
 }
@@ -101,12 +106,20 @@ label {
 }
 
 
-
 .item:hover .content {
     transition-delay: 0.3s;
     max-height: 100%;
     opacity: 1;
 }
+
+
+.item:active .content {
+    transition-delay: 0.3s;
+    max-height: 100%;
+    opacity: 1;
+}
+
+
 
 .accordion:hover{
     cursor: pointer;
