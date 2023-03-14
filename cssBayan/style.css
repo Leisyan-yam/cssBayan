@@ -11,6 +11,7 @@ h1{
 }
 
 img {
+    padding-top: 5%;
     width: 50%;
     padding-bottom: 5%;
 }
@@ -47,6 +48,8 @@ input:checked + label .content {
 
 .item {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 .content {
     display: flex;
