@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Jost', sans-serif;
+    box-sizing: border-box;
+}
+
+h1{
+    padding: 1rem;
+    font-size: 3em;
+}
+
+img {
+    padding-top: 5%;
+    width: 50%;
+    padding-bottom: 5%;
+}
+
+body {
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow:visible;
+    height: 100%;
+}
+
+.accordion {
+    width: 40vw;
+    margin-top: 2vh;
+    padding: 0.5rem;
+}
+
+
+input {
+    display: none;
+    cursor: pointer;
+}
+
+input:checked + label .content {
+    color: black;
+    max-height: fit-content;
+    opacity: 1;
+}
+
+
+
+.item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;  
+    max-height: 0;
+    opacity: 0;
+    -webkit-transition: width 1.5s, max-height 1.5s, opacity 1.5s, -webkit-transform 1.5s;
+    transition: width 1.5s, max-height 1.5s, opacity 1.5s, transform 1.5s;
+}
+
+.item > input:checked ~ .content {
+    max-height: fit-content;
+    opacity: 1;
+}
+
+
+label {
+    cursor: pointer;
+    display:inline-block;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    overflow: hidden; 
+    border-top: 0.2rem solid burlywood;
+    width: 100%;
+    color: #a54296;
+    font-weight: bolder;
+    -webkit-transition: color 0.8s,  -webkit-transform 0.5s;
+    transition: color 0.8s;
+}
+
+
+.icon {
+    opacity: 0;
+    padding-bottom: 0;
+    width: 2em;
+    float: right;
+    transform: rotate(0deg);
+    -webkit-transition: opacity 0.8s, transform 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.8s, transform 0.5s; 
+}
+
+.item > input:checked ~ label .icon {
+    opacity: 1;
+    transform: rotate(180deg);
+}
+
+
+
+.accordion:hover .icon {
+    opacity: 1;
+}
+
+.accordion:hover label {
+    color: black;
+}
+
+
+.item:hover .content {
+    transition-delay: 0.3s;
+    max-height: 100%;
+    opacity: 1;
+}
+
+
+.item:active .content {
+    transition-delay: 0.3s;
+    max-height: 100%;
+    opacity: 1;
+}
+
+
+
+.accordion:hover{
+    cursor: pointer;
+}
+
+
+.item:hover .icon {
+    transform: rotate(180deg);
+}
+
+
+@media all and (max-width:1000px) {
+
+    .accordion:focus label {
+        color: black;
+    }
+
+
+    .accordion:focus .icon {
+        opacity: 1;
+    }
+    
+    h1{
+        font-size: 1.8em;
+    }
+    
+    .accordion {
+        width: 65%;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+}
+
+
+@media all and (max-width:568px) {
+
+    h1{
+        font-size: 1.6em;
+    }
+    .accordion {
+        width: 90%;
+    }
+    img {
+        width: 70%;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+}
